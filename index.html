@@ -1,0 +1,20 @@
+<!doctype html><html lang="hi">
+<head><meta charset="utf-8"><title>Certificate Generator</title>
+<style>
+body{font-family:sans-serif;max-width:640px;margin:2rem auto;}
+label{display:block;margin-top:12px;}input{width:100%;padding:6px;}
+button{margin-top:20px;padding:10px 20px;font-size:1rem;}
+</style></head>
+<body>
+  <h2>प्रमाण-पत्र बनाने हेतु विवरण दर्ज करें</h2>
+  <form action="/generate" method="POST">
+    <label>पूरा नाम<input name="name" required></label>
+    <label>पिता का नाम<input name="father" required></label>
+    <label>पूरा पता<input name="addr" required></label>
+    <label>थाना<input name="thana" required></label>
+    <label>जिला<input name="district" required></label>
+    <label>अनुरोध संख्या<input name="req_no" required></label>
+    <label>निर्गत तिथि<input type="date" name="date" value="{{ today }}" required></label>
+    <button type="submit">Generate Certificate</button>
+  </form>
+</body></html>
